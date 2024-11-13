@@ -2,7 +2,6 @@
 void readString(char* s, int maxLen, const char* prompt) { 
     printf("%s", prompt); 
     fgets(s, maxLen, stdin); 
-    // Removing the trailing newline character 
     int i = 0; 
     while (s[i] != '\n' && s[i] != '\0') i++; 
     s[i] = '\0'; 
