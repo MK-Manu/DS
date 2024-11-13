@@ -1,17 +1,14 @@
 #include <stdio.h> 
 #include <stdbool.h> 
 #define MAX 10 // Maximum size of the Circular Queue 
-// Global Variables 
 char queue[MAX]; 
 int front = -1; 
 int rear = -1; 
-// Function Prototypes 
 void enqueue(char element); 
 void dequeue(); 
 void displayQueue(); 
 bool isFull(); 
 bool isEmpty(); 
-// Main Function 
 int main() { 
     int choice; 
     char element; 
@@ -78,7 +75,7 @@ void displayQueue() {
     for (int i = front; i != rear; i = (i + 1) % MAX) { 
         printf("%c ", queue[i]); 
     } 
-    printf("%c\n", queue[rear]); // Display the last element 
+    printf("%c\n", queue[rear]);
 } 
  
 bool isFull() { 
