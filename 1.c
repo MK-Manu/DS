@@ -4,15 +4,13 @@
 typedef struct { 
 char *name;        
 int date;          
-// Name of the day 
-// Date of the day 
-char *description; // Description of the activity 
+char *description; 
 } Day; 
 void create(Day *week, int size) { 
 for (int i = 0; i < size; i++) { 
-// Allocate memory for name 
+
 week[i].name = (char *)malloc(20 * sizeof(char));  
-// Allocate memory for description 
+
 week[i].description = (char *)malloc(100 * sizeof(char));  
 } 
 } 
@@ -23,8 +21,7 @@ for (int i = 0; i < size; i++) {
         printf("Enter date: "); 
         scanf("%d", &week[i].date); 
         printf("Enter description: "); 
-        scanf(" %[^\n]", week[i].description); // Read a line of text 
-including spaces 
+        scanf(" %[^\n]", week[i].description); 
     } 
 } 
  
@@ -37,15 +34,13 @@ week[i].date, week[i].description);
 } 
  
 int main() { 
-    int size = 7; // 7 days in a week 
-    Day *week = (Day *)malloc(size * sizeof(Day)); // Dynamically 
-allocate the array 
+    int size = 7; 
+    Day *week = (Day *)malloc(size * sizeof(Day)); 
  
-    create(week, size); // Allocate memory for names and descriptions 
-    read(week, size);   // Read data from user 
-    display(week, size); // Display the week's activities 
+    create(week, size); 
+    read(week, size);  
+    display(week, size); 
  
-    // Free the allocated memory 
     for (int i = 0; i < size; i++) { 
         free(week[i].name); 
         free(week[i].description); 
