@@ -48,9 +48,9 @@ return 0;
 } 
 void fnPush(int Stack[], int *t , int elem) 
 { 
-} 
 *t = *t + 1; 
 Stack[*t] = elem; 
+}
 int fnPop(int Stack[], int *t) 
 {
   int elem; 
